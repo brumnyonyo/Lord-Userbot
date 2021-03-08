@@ -30,8 +30,8 @@ logging.basicConfig(
 @register(outgoing=True, pattern=r"^\.helpme")
 async def yardim(event):
     try:
-        tgbotusername = BOT_USERNAME
-        if tgbotusername is not None:
+        tgbotusername = kuntul
+        if tgbotusername is not None:kuntul
             results = await event.client.inline_query(tgbotusername, "@UserButt")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
